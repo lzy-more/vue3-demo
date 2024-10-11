@@ -1,41 +1,38 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-defineProps<{ msg: string }>()
+defineProps<{ msg: string }>();
 
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div class="card flex-1 bg-slate-500">
+    <button type="button" @click="count++" class="button">
+      count is {{ count }}
+    </button>
+    <a-space wrap>
+      <a-button type="primary">Primary Button</a-button>
+      <a-button>Default Button</a-button>
+      <a-button type="dashed">Dashed Button</a-button>
+      <a-button type="text">Text Button</a-button>
+      <a-button type="link">Link Button</a-button>
+    </a-space>
+    <div
+      class="bg-slate-500 text-3xl font-bold bg-sky-500 hover:bg-sky-700 cursor-pointer"
+    >
+      tailwindcss
+    </div>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .read-the-docs {
   color: #888;
+}
+.button {
+  color: $secondary-color;
 }
 </style>

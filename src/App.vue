@@ -1,8 +1,13 @@
 <script setup lang="ts">
-import DrawingBoard from "./components/DrawingBoard.vue";
+// import DrawingBoard from "./components/DrawingBoard.vue";
+import DrawingBoard from "./components/HelloWorld.vue";
 </script>
 
-<template><DrawingBoard></DrawingBoard></template>
+<template>
+  <a-style-provider hash-priority="high">
+    <DrawingBoard msg="收到是的是的"></DrawingBoard>
+  </a-style-provider>
+</template>
 
 <style scoped>
 .logo {
